@@ -39,7 +39,13 @@ export const findAll = async (
     .populate("createdBy","user");
     return result;
   };
-export const findOne = async (id: string): Promise<Order | null> => {
-  const result = await OrdersModel.findById({ createdBy:id });
+export const findOne = async (id: string): Promise<Order[] | null> => {
+//   // const newid = new mongoose.Types.ObjectId(id);
+//   // const result = await OrdersModel.findById({"createdBy._id":newid});
+//   console.log(new mongoose.Types.ObjectId(id));
+//   const result2 = await OrdersModel.find({});
+// console.log(result2);
+
+  const result = await OrdersModel.find({ "createdBy": new mongoose.Types.ObjectId(id) });
   return result;
 };
