@@ -28,7 +28,7 @@ The project is deployed on Vercel at [https://sanberbe59-hendra.vercel.app](http
 
 * `POST /api/orders`: Create new order
 * `GET /api/orders`: Get all orders
-* `GET /api/orders/{id}`: Get one order based on id
+* `GET /api/orders/{id}`: Get one order based on user id
 
 ## Swagger Documentation
 
