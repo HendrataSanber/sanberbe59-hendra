@@ -40,6 +40,6 @@ export const findAll = async (
     return result;
   };
 export const findOne = async (id: string): Promise<Order | null> => {
-  const result = await OrdersModel.findById({createdBy:id});
+  const result = await OrdersModel.findById({ createdBy:id });
   return result;
 };
